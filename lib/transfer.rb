@@ -20,7 +20,7 @@ class Transfer
     if self.valid? && self.status = "pending" && sender.balance > amount
       sender.withdraw(amount)
       receiver.deposit(amount)
-      @status = "complete"
+      self.status = "complete"
     else
       return "Transaction rejected. Please check your account balance."
     end
