@@ -23,7 +23,7 @@ class Transfer
       @status = "complete"
       @count = 1
     else
-      break
+      return false
     end
   end
 end
