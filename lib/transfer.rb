@@ -15,9 +15,13 @@ class Transfer
   end
 
   def execute_transaction
+    if @count > 0
+      break
+    else
     sender.withdraw(amount)
     receiver.deposit(amount)
     @status = "complete"
     @count = 1
+  end
   end
 end
