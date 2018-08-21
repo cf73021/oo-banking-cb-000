@@ -19,11 +19,12 @@ class Transfer
 
   def execute_transaction
     if @count == 0 && sender.valid?
+      @count = 1
       sender.withdraw(amount)
       receiver.deposit(amount)
       @status = "complete"
-      @count = 1
-    elsif sender.valid? == false
+
+    else sender.valid? == false
       return "Transaction rejected. Please check your account balance."
     end
   end
