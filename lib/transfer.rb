@@ -16,7 +16,7 @@ class Transfer
 
   def execute_transaction
     if @count > 0
-      break
+      nill
     else
       sender.withdraw(amount)
       receiver.deposit(amount)
