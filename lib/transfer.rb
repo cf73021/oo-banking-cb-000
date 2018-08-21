@@ -30,5 +30,6 @@ class Transfer
   def reverse_transfer
     sender.deposit(amount)
     receiver.withdraw(amount)
+    self.status = "reversed"
   end
 end
