@@ -9,7 +9,6 @@ class Transfer
     @receiver = receiver
     @status = status
     @amount = amount
-    @count = 0
   end
 
   def valid?
@@ -19,7 +18,6 @@ class Transfer
 
   def execute_transaction
     if self.valid? && @status = "pending" && sender.balance > amount
-      @count = 1
       sender.withdraw(amount)
       receiver.deposit(amount)
       @status = "complete"
