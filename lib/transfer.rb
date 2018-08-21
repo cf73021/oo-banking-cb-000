@@ -18,5 +18,6 @@ class Transfer
     sender.withdraw(amount)
     receiver.deposit(amount)
     @status = "complete"
+    @count = 1
   end
 end
