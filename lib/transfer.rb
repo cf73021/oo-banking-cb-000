@@ -3,6 +3,6 @@ class Transfer
   attr_reader :sender
 
   def initialize(sender, balance=1000, status="open")
-    @sender = name
+    @sender = sender
   end
 end
