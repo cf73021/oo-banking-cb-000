@@ -23,7 +23,7 @@ class Transfer
       sender.withdraw(amount)
       receiver.deposit(amount)
       @status = "complete"
-    else sender.valid? == false
+    elsif @count > 0 
       return "Transaction rejected. Please check your account balance."
     end
   end
