@@ -9,6 +9,6 @@ class BankAccount
   end
 
   def deposit(money)
-    balance.to_i + money.to_i
+    @balance = balance.to_i + money.to_i
   end
 end
