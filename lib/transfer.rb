@@ -15,7 +15,7 @@ class Transfer
   end
 
   def execute_transaction
-    if @count > 0
+    if @count = 0
       nil
     else
       sender.withdraw(amount)
