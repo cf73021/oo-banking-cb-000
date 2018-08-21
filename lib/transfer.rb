@@ -33,4 +33,5 @@ class Transfer
     receiver.withdraw(amount)
     self.status = "reversed"
   end
+  end
 end
